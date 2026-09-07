@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "b31c0500231660043522",
+  "name": "3fcd9bf937a79be2f4e9",
   "position": {
-    "x": 645.21076253411218,
-    "y": 303.11915018381109,
-    "z": 3000,
-    "height": 57.736980987392592,
-    "width": 82.275197907034439,
-    "tabOrder": 3000
+    "x": 299.26030292356467,
+    "y": 436.20993307502641,
+    "z": 4005,
+    "height": 111.58858753082072,
+    "width": 299.26030292356467,
+    "tabOrder": 4005
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Clientes Unicos"
+                  "Property": "Ticket Promedio"
                 }
               },
-              "queryRef": "Medidas.Clientes Unicos",
-              "nativeQueryRef": "Clientes Unicos"
+              "queryRef": "Medidas.Ticket Promedio",
+              "nativeQueryRef": "Ticket Promedio"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Clientes Unicos"
+                "Property": "Ticket Promedio"
               }
             },
             "direction": "Descending"
@@ -51,49 +51,8 @@
         "isDefaultSort": true
       }
     },
-    "objects": {
-      "categoryLabels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
     "visualContainerObjects": {
       "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
         {
           "properties": {
             "show": {

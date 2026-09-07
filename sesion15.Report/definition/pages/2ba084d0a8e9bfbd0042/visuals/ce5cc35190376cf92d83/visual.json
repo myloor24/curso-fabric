@@ -1,38 +1,19 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "27fadd079a68a706ae00",
+  "name": "ce5cc35190376cf92d83",
   "position": {
-    "x": 466.22612147319518,
-    "y": 170.32409391280814,
-    "z": 2000,
-    "height": 264.14668801732108,
-    "width": 440.24448002886851,
-    "tabOrder": 2000
+    "x": 0,
+    "y": 434.519196900317,
+    "z": 4003,
+    "height": 113.27932370553012,
+    "width": 299.26030292356467,
+    "tabOrder": 4003
   },
   "visual": {
-    "visualType": "donutChart",
+    "visualType": "card",
     "query": {
       "queryState": {
-        "Category": {
-          "projections": [
-            {
-              "field": {
-                "Column": {
-                  "Expression": {
-                    "SourceRef": {
-                      "Entity": "dim_tienda"
-                    }
-                  },
-                  "Property": "nombre_tienda"
-                }
-              },
-              "queryRef": "dim_tienda.nombre_tienda",
-              "nativeQueryRef": "nombre_tienda",
-              "active": true
-            }
-          ]
-        },
-        "Y": {
+        "Values": {
           "projections": [
             {
               "field": {
@@ -42,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Clientes Unicos"
+                  "Property": "Ventas Totales"
                 }
               },
-              "queryRef": "Medidas.Clientes Unicos",
-              "nativeQueryRef": "Clientes Unicos"
+              "queryRef": "Medidas.Ventas Totales",
+              "nativeQueryRef": "Ventas Totales"
             }
           ]
         }
@@ -61,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Clientes Unicos"
+                "Property": "Ventas Totales"
               }
             },
             "direction": "Descending"
@@ -71,26 +52,28 @@
       }
     },
     "objects": {
-      "legend": [
+      "labels": [
+        {
+          "properties": {
+            "labelDisplayUnits": {
+              "expr": {
+                "Literal": {
+                  "Value": "1D"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "visualContainerObjects": {
+      "title": [
         {
           "properties": {
             "show": {
               "expr": {
                 "Literal": {
                   "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "labels": [
-        {
-          "properties": {
-            "labelStyle": {
-              "expr": {
-                "Literal": {
-                  "Value": "'Category, data value, percent of total'"
                 }
               }
             }
