@@ -1,0 +1,64 @@
+table dim_tienda
+	lineageTag: 7711ced0-26e9-4eb3-9898-4807d4d92ff8
+	sourceLineageTag: 68747c44-e067-4e0a-a773-be1a5279e86e
+
+	column tienda_key
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 2f841051-6019-41a9-80ef-523643a6f9e8
+		sourceLineageTag: ca68ab52-fe8a-4de7-aa89-99f25b87191a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: tienda_key
+
+		annotation SummarizationSetBy = User
+
+	column tienda_id_nk
+		dataType: string
+		lineageTag: c8197da0-641a-491c-9fbb-b86569e359b2
+		sourceLineageTag: 1d0784c5-0d7d-4d5f-9e04-c18045d3cf00
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: tienda_id_nk
+
+		annotation SummarizationSetBy = User
+
+	column nombre_tienda
+		dataType: string
+		lineageTag: f1879a4f-781c-4f0b-9a1e-cc0bea313c9c
+		sourceLineageTag: c9c9c850-5e0b-41b0-bfc8-1c380cd88832
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: nombre_tienda
+
+		annotation SummarizationSetBy = User
+
+	column ciudad
+		dataType: string
+		lineageTag: 3d5ae657-ea1b-4842-8538-6eeed11fca9c
+		sourceLineageTag: 1ad7dbed-c7b8-4121-9412-37d98ed0dff3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: ciudad
+
+		annotation SummarizationSetBy = User
+
+	column region
+		dataType: string
+		lineageTag: 8ffda66c-8ae4-465d-971e-d05d715e2252
+		sourceLineageTag: 7251c073-5b70-46ec-84c7-df3680768973
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: region
+
+		annotation SummarizationSetBy = User
+
+	partition dim_tienda = entity
+		mode: directQuery
+		source
+			entityName: dim_tienda
+			expressionSource: 'De DirectQuery a AS: MS_Ventas_Version1'
+
+	annotation PBI_ResultType = Exception
+

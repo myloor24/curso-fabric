@@ -1,0 +1,156 @@
+table dim_tiempo
+	lineageTag: 76b23886-0be4-466e-92e8-44f0967a69ca
+	sourceLineageTag: fd7e4fca-1d6a-460c-88fa-56bf1f3fee8b
+
+	column fecha_key
+		dataType: int64
+		formatString: 0
+		lineageTag: 507391ce-a60a-4da9-b7a5-502d479f346a
+		sourceLineageTag: 76dff701-88d4-4d2e-ae55-51bd7b7db834
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: fecha_key
+
+		annotation SummarizationSetBy = User
+
+	column fecha
+		dataType: dateTime
+		formatString: General Number
+		lineageTag: 8073b0da-995e-42e8-a88e-e38ced1ec3dd
+		sourceLineageTag: 3ce3bb79-98bc-43d0-a11b-5516a065fa0f
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: fecha
+
+		annotation SummarizationSetBy = User
+
+	column anio
+		dataType: int64
+		formatString: 0
+		lineageTag: 6c1675bc-3ae9-4ed1-8486-4b1ee8ca3c1c
+		sourceLineageTag: 5681ce87-1969-4dbd-a2f4-2c528200ee4a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: anio
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column trimestre
+		dataType: int64
+		formatString: 0
+		lineageTag: b8980f4e-29fd-4d6f-8b86-568a74740416
+		sourceLineageTag: 04d52725-08b8-4738-821d-cc7763b195d4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: trimestre
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column mes
+		dataType: int64
+		formatString: 0
+		lineageTag: ecc46136-888d-4717-9097-8127fe073016
+		sourceLineageTag: 95b8e46d-b504-440a-8343-e90851c38db4
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: mes
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column dia
+		dataType: int64
+		formatString: 0
+		lineageTag: d6f4660f-306d-42a5-a571-a43a17c9deab
+		sourceLineageTag: da11c809-1013-4f06-ae97-aaf30a243cc3
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: dia
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column nombre_dia
+		dataType: string
+		lineageTag: d9bd4f8f-336f-42d9-9c2b-b50d812e13b7
+		sourceLineageTag: b8171dd2-0607-4597-a1e0-224daadbecad
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: nombre_dia
+
+		annotation SummarizationSetBy = User
+
+	column nombre_mes
+		dataType: string
+		lineageTag: 159ab3f3-82d0-4779-ac35-7c6fdfa22a00
+		sourceLineageTag: 83187ad5-b45e-418c-a7cb-fc0fd8d62d4a
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: nombre_mes
+		sortByColumn: mes
+
+		annotation SummarizationSetBy = User
+
+	column es_fin_semana
+		dataType: int64
+		formatString: 0
+		lineageTag: b071d131-3edb-422b-bb80-7038b50415d4
+		sourceLineageTag: 693aafde-2e77-44d8-91ab-9cfd99c4917c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: es_fin_semana
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column es_feriado
+		dataType: int64
+		formatString: 0
+		lineageTag: f7ed397f-a16b-41ac-a0d9-7ab210f40517
+		sourceLineageTag: 002ad06d-c722-4e60-a82d-5184d8aaf858
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: es_feriado
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column es_dia_habil
+		dataType: int64
+		formatString: 0
+		lineageTag: 7cedc075-5bff-4c6b-afde-00e35401fef1
+		sourceLineageTag: c0b03229-b99f-49b5-ac7a-4b55899f1388
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: es_dia_habil
+
+		changedProperty = SummarizeBy
+
+		annotation SummarizationSetBy = User
+
+	column campania
+		dataType: string
+		lineageTag: b9b2e0ea-e4a1-462e-a560-2cf420587773
+		sourceLineageTag: ef7b9a79-6004-4d31-8737-c1bbdde15b2b
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: campania
+
+		annotation SummarizationSetBy = User
+
+	partition dim_tiempo = entity
+		mode: directQuery
+		source
+			entityName: dim_tiempo
+			expressionSource: 'De DirectQuery a AS: MS_Ventas_Version1'
+
+	annotation PBI_ResultType = Exception
+

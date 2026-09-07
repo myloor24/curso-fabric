@@ -1,0 +1,23 @@
+model Model
+	culture: es-ES
+	defaultPowerBIDataSourceVersion: powerBI_V3
+	sourceQueryCulture: es-US
+	dataAccessOptions
+		legacyRedirects
+		returnErrorValuesAsNull
+
+annotation __PBI_TimeIntelligenceEnabled = 1
+
+annotation PBI_QueryOrder = ["De DirectQuery a AS: MS_Ventas_Version1","Medidas"]
+
+annotation PBI_ProTooling = ["DevMode"]
+
+ref table dim_tiempo
+ref table dim_producto
+ref table dim_cliente
+ref table dim_tienda
+ref table fact_ventas
+ref table Medidas
+
+ref cultureInfo es-ES
+
