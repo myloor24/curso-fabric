@@ -1,13 +1,13 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.7.0/schema.json",
-  "name": "b31c0500231660043522",
+  "name": "930875401c7b290a4700",
   "position": {
-    "x": 645.21076253411218,
-    "y": 303.11915018381109,
-    "z": 3000,
-    "height": 57.736980987392592,
-    "width": 82.275197907034439,
-    "tabOrder": 3000
+    "x": 596.82986967241993,
+    "y": 434.519196900317,
+    "z": 4004,
+    "height": 111.58858753082072,
+    "width": 299.26030292356467,
+    "tabOrder": 4004
   },
   "visual": {
     "visualType": "card",
@@ -23,11 +23,11 @@
                       "Entity": "Medidas"
                     }
                   },
-                  "Property": "Clientes Unicos"
+                  "Property": "Numero de Ventas"
                 }
               },
-              "queryRef": "Medidas.Clientes Unicos",
-              "nativeQueryRef": "Clientes Unicos"
+              "queryRef": "Medidas.Numero de Ventas",
+              "nativeQueryRef": "Numero de Ventas"
             }
           ]
         }
@@ -42,7 +42,7 @@
                     "Entity": "Medidas"
                   }
                 },
-                "Property": "Clientes Unicos"
+                "Property": "Numero de Ventas"
               }
             },
             "direction": "Descending"
@@ -51,49 +51,8 @@
         "isDefaultSort": true
       }
     },
-    "objects": {
-      "categoryLabels": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ]
-    },
     "visualContainerObjects": {
       "title": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "background": [
-        {
-          "properties": {
-            "show": {
-              "expr": {
-                "Literal": {
-                  "Value": "false"
-                }
-              }
-            }
-          }
-        }
-      ],
-      "border": [
         {
           "properties": {
             "show": {
