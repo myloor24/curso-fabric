@@ -1,7 +1,7 @@
 {
   "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/page/2.1.0/schema.json",
   "name": "2ba084d0a8e9bfbd0042",
-  "displayName": "Página 1",
+  "displayName": "Reporte de Ventas",
   "displayOption": "FitToPage",
   "height": 1000,
   "width": 1500,
