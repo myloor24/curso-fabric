@@ -1,0 +1,110 @@
+table fact_ventas
+	lineageTag: 6fd87c40-51ca-447b-a020-3a13f2b171e6
+	sourceLineageTag: 96bc47d3-ded2-4419-93ce-33b8cdec97da
+
+	column venta_id
+		dataType: string
+		lineageTag: b5ff3c94-09be-4cce-a5d4-88650a75d9c9
+		sourceLineageTag: 8a655eff-07d6-47af-ab25-e83a22693d26
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: venta_id
+
+		annotation SummarizationSetBy = User
+
+	column fecha_key
+		dataType: int64
+		isNullable: false
+		formatString: 0
+		lineageTag: 6e16bf30-2e3b-4e12-badb-0d3be79af6da
+		sourceLineageTag: 44223080-7bd3-40d6-ac93-4fb787b825da
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: fecha_key
+
+		annotation SummarizationSetBy = User
+
+	column producto_key
+		dataType: int64
+		formatString: 0
+		lineageTag: c3ba45ef-43a5-4e65-abbd-31e7012017e5
+		sourceLineageTag: dba7f5cd-9d28-4ce9-955e-9bd000b4e579
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: producto_key
+
+		annotation SummarizationSetBy = User
+
+	column cliente_key
+		dataType: int64
+		formatString: 0
+		lineageTag: b2f96ecf-6e0a-4f51-b913-52a7cc3ee90d
+		sourceLineageTag: f2a16945-03c6-4916-8b64-1015c859b74c
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: cliente_key
+
+		annotation SummarizationSetBy = User
+
+	column tienda_key
+		dataType: int64
+		formatString: 0
+		lineageTag: c467ff41-5415-470d-8b03-1d3a94215c1e
+		sourceLineageTag: c105b58a-306e-464d-92d6-1464af09f116
+		dataCategory: Uncategorized
+		summarizeBy: none
+		sourceColumn: tienda_key
+
+		annotation SummarizationSetBy = User
+
+	column cantidad
+		dataType: int64
+		formatString: 0
+		lineageTag: 98eb97ac-e38a-4f64-aa0f-eed91a763a19
+		sourceLineageTag: 059036f5-9f41-44f5-a1d9-1e6c63e73b94
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: cantidad
+
+		annotation SummarizationSetBy = User
+
+	column precio_unitario
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: fb6af176-9c9c-471c-a628-6a6460fca249
+		sourceLineageTag: 4ee044b8-6c7a-41a9-a3b6-721998d8deb8
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: precio_unitario
+
+		annotation SummarizationSetBy = User
+
+	column descuento
+		dataType: decimal
+		formatString: \$#,0.###############;(\$#,0.###############);\$#,0.###############
+		lineageTag: af6e2b4a-06c3-4aa7-86e7-a2e5672e42fd
+		sourceLineageTag: e49a3718-6088-45e1-9168-552b8f87c01e
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: descuento
+
+		annotation SummarizationSetBy = User
+
+	column monto_total
+		dataType: double
+		lineageTag: 1701ef68-9933-4a15-a31c-7f95faba0e6b
+		sourceLineageTag: 018aee5f-9678-426a-8993-3ddf5f2b2759
+		dataCategory: Uncategorized
+		summarizeBy: sum
+		sourceColumn: monto_total
+
+		annotation SummarizationSetBy = User
+
+	partition fact_ventas = entity
+		mode: directQuery
+		source
+			entityName: fact_ventas
+			expressionSource: 'De DirectQuery a AS: MS_Ventas_Version1'
+
+	annotation PBI_ResultType = Exception
+

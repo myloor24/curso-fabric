@@ -1,0 +1,16 @@
+relationship a5854d2c-f5c6-4901-93f2-bbfb17766145
+	fromColumn: dim_tiempo.fecha_key
+	toColumn: fact_ventas.fecha_key
+
+relationship 0924ede3-a902-46af-a654-d8ecc4c51ab5
+	fromColumn: fact_ventas.cliente_key
+	toColumn: dim_cliente.cliente_key
+
+relationship b52328b1-d685-48de-9212-846b1d57118f
+	fromColumn: fact_ventas.producto_key
+	toColumn: dim_producto.producto_key
+
+relationship 6eb348a5-1e89-4cf4-b75f-317864293841
+	fromColumn: fact_ventas.tienda_key
+	toColumn: dim_tienda.tienda_key
+
